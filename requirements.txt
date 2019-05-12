@@ -1,5 +1,7 @@
 beautifulsoup4==4.7.1
 dash==0.42.0
 dash-daq==0.1.0
+numpy==1.16.3
 pandas==0.24.2
+plotly==3.9.0
 requests==2.21.0
