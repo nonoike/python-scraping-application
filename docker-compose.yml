@@ -1,0 +1,17 @@
+version: '3.1'
+services:
+  jupyter:
+    image: jupyter/scipy-notebook
+    container_name: python-scraping-application-jupyter
+    volumes:
+      - .:/home/jovyan/work
+    ports:
+      - 8888:8888
+    environment:
+      GRANT_SUDO: "yes"
+      TZ: "Asia/Tokyo"
+    command: >
+      sh -c '
+      pip install --upgrade pip &&
+      pip install -r /home/jovyan/work/requirements.txt &&
+      start.sh jupyter lab --NotebookApp.token="" --NotebookApp.password=""'
